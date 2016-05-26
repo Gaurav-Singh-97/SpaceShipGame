@@ -30,5 +30,7 @@ int main(int argc, char *argv[])
     view->setFixedSize(800, 600);
     scene->setSceneRect(0, 0, 800, 600);
 
+    rect->setPos(view->width()/2, view->height()-rect->rect().height());
+
     return a.exec();
 }
