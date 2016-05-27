@@ -22,6 +22,10 @@ void Game::show()
     score = new Score();
     scene->addItem(score);
 
+    health = new Health();
+    health->setPos(health->x(), health->y()+25);
+    scene->addItem(health);
+
     // make rect focusable
     player->setFlag(QGraphicsItem::ItemIsFocusable);
     player->setFocus();
