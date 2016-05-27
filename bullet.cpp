@@ -4,6 +4,10 @@
 #include <QList>
 #include "enemy.h"
 #include <typeinfo>
+#include "game.h"
+#include "score.h"
+
+extern Game * game;
 
 Bullet::Bullet()
 {
@@ -23,6 +27,9 @@ void Bullet::move()
     {
         if (typeid(*(colliding_items[i])) == typeid(Enemy))
         {
+            // increase the score
+            game->score->increase();
+
             // remove them both
             scene()->removeItem(colliding_items[i]);
             scene()->removeItem(this);

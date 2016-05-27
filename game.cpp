@@ -1,5 +1,7 @@
 #include "game.h"
-
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QTimer>
 
 Game::Game(QWidget *parent)
 {
@@ -16,6 +18,9 @@ void Game::show()
     player->setRect(0, 0, 100, 100);
 
     scene->addItem(player);
+
+    score = new Score();
+    scene->addItem(score);
 
     // make rect focusable
     player->setFlag(QGraphicsItem::ItemIsFocusable);

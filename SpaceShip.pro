@@ -16,12 +16,14 @@ SOURCES += main.cpp \
     myrect.cpp \
     bullet.cpp \
     enemy.cpp \
-    game.cpp
+    game.cpp \
+    score.cpp
 
 HEADERS  += \
     myrect.h \
     bullet.h \
     enemy.h \
-    game.h
+    game.h \
+    score.h
 
 FORMS    +=
