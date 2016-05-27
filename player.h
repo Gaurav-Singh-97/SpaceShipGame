@@ -1,10 +1,10 @@
-#ifndef MYRECT
-#define MYRECT
+#ifndef PLAYER
+#define PLAYER
 
 #include <QGraphicsRectItem>
 #include <QObject>
 
-class MyRect : public QObject, public QGraphicsRectItem
+class Player : public QObject, public QGraphicsRectItem
 {
     Q_OBJECT
 public:
@@ -13,5 +13,5 @@ public slots:
     void spawn();
 };
 
-#endif // MYRECT
+#endif // PLAYER
 

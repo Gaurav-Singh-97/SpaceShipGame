@@ -14,7 +14,7 @@ void Game::show()
     QGraphicsScene * scene = new QGraphicsScene();
 
     // create an item to put into the scene
-    MyRect * player = new MyRect();
+    Player * player = new Player();
     player->setRect(0, 0, 100, 100);
 
     scene->addItem(player);
