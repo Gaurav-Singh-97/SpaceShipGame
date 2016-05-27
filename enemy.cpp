@@ -24,7 +24,7 @@ void Enemy::move()
 {
     // move enemy down
     setPos(x(), y()+5);
-    if (pos().y() + rect().height() < 0)
+    if (pos().y() > 600)
     {
         scene()->removeItem(this);
         delete this;
