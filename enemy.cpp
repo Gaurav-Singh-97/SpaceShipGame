@@ -5,6 +5,8 @@
 
 #include <stdlib.h>
 
+extern Game * game;
+
 Enemy::Enemy()
 {
     // set random position
@@ -26,6 +28,9 @@ void Enemy::move()
     setPos(x(), y()+5);
     if (pos().y() > 600)
     {
+        // decrease the health
+        game->health->decrease();
+
         scene()->removeItem(this);
         delete this;
     }
