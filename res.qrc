@@ -3,4 +3,10 @@
         <file>antitankriflefire.wav</file>
         <file>DesertWind.wav</file>
     </qresource>
+    <qresource prefix="/images">
+        <file>background.jpg</file>
+        <file>Bullet.png</file>
+        <file>Enemy.png</file>
+        <file>Player.png</file>
+    </qresource>
 </RCC>
