@@ -16,6 +16,9 @@ Enemy::Enemy(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent)
 
     //setRect(0, 0, 100, 100);
     setPixmap(QPixmap(":/images/Enemy.png"));
+    setTransformOriginPoint(35, 30);
+    //image is 70 X 61
+    setRotation(180);
 
     // connect
     QTimer * timer = new QTimer();
