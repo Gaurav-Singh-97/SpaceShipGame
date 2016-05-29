@@ -8,13 +8,14 @@
 
 extern Game * game;
 
-Enemy::Enemy(QGraphicsItem *parent) : QObject(), QGraphicsRectItem(parent)
+Enemy::Enemy(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent)
 {
     // set random position
     int random_number = rand()%700;
     setPos(random_number, 0);
 
-    setRect(0, 0, 100, 100);
+    //setRect(0, 0, 100, 100);
+    setPixmap(QPixmap(":/images/Enemy.png"));
 
     // connect
     QTimer * timer = new QTimer();
