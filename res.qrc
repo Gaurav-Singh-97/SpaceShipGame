@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/sounds">
+        <file>antitankriflefire.wav</file>
+        <file>DesertWind.wav</file>
+    </qresource>
+</RCC>

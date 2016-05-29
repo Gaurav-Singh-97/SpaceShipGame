@@ -29,3 +29,6 @@ HEADERS  += \
     health.h
 
 FORMS    +=
+
+RESOURCES += \
+    res.qrc
