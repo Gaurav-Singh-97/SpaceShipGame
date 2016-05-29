@@ -4,6 +4,12 @@
 #include "bullet.h"
 #include "enemy.h"
 
+Player::Player(QGraphicsItem *parent)
+{
+    bulletsound = new QMediaPlayer();
+    bulletsound->setMedia(QUrl("qrc:/sounds/antitankriflefire.wav"));
+}
+
 void Player::keyPressEvent(QKeyEvent *event)
 {
     if (event->key() == Qt::Key_Left)
@@ -31,6 +37,9 @@ void Player::keyPressEvent(QKeyEvent *event)
         Bullet * bullet = new Bullet();
         bullet->setPos(x(), y());
         scene()->addItem(bullet);
+
+        // play bulletsound
+        bulletsound->play();
     }
 }
 
