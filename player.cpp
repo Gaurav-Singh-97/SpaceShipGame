@@ -4,10 +4,12 @@
 #include "bullet.h"
 #include "enemy.h"
 
-Player::Player(QGraphicsItem *parent)
+Player::Player(QGraphicsItem *parent) : QObject(), QGraphicsPixmapItem(parent)
 {
     bulletsound = new QMediaPlayer();
     bulletsound->setMedia(QUrl("qrc:/sounds/antitankriflefire.wav"));
+
+    setPixmap(QPixmap(":/images/Player.png"));
 }
 
 void Player::keyPressEvent(QKeyEvent *event)
