@@ -39,7 +39,14 @@ void Player::keyPressEvent(QKeyEvent *event)
         scene()->addItem(bullet);
 
         // play bulletsound
-        bulletsound->play();
+        if (bulletsound->state() == QMediaPlayer::PlayingState)
+        {
+            bulletsound->setPosition(0);
+        }
+        else if (bulletsound->state() == QMediaPlayer::StoppedState)
+        {
+            bulletsound->play();
+        }
     }
 }
 
