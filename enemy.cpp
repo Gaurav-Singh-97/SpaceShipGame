@@ -2,6 +2,7 @@
 #include "enemy.h"
 #include <QTimer>
 #include <QGraphicsScene>
+#include "game.h"
 
 #include <stdlib.h>
 
